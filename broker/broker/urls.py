@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import broker_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/broker/servicio1/', broker_view),
 ]
+

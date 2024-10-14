@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-erkpport@$b4v^a7h=g&26!6a+k2jwp_2j++8xiba1sbvlgsgy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

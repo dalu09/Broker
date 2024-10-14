@@ -18,10 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from .views import broker_view
 from .views import broker_post
+from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/broker/servicio1/', broker_view),
-    path('api/broker/servicio2/', broker_post)
+    path('api/broker/servicio2/', csrf_exempt(broker_post))
 ]
 

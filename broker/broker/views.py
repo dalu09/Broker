@@ -27,7 +27,7 @@ def broker_post(request):
     session = requests.Session()
 
     try:
-        response = session.get(service_url, params=request.body, timeout=5)  
+        response = session.post(service_url, params=request.body, timeout=5)  
         return JsonResponse(response.json(), status=response.status_code)
     except requests.exceptions.RequestException as e:
         return JsonResponse({"error": "No se pudo conectar al servicio"}, status=500)

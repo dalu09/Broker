@@ -21,5 +21,6 @@ from .views import broker_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/broker/servicio1/', broker_view),
+    path('api/broker/servicio2/', broker_post)
 ]
 
